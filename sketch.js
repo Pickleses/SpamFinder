@@ -460,6 +460,7 @@ function draw() {
       text(wordstodraw[i], 10, 70 + (i * 30));
       fill(0, 0, 0);
    }
+  DrawScore()
 }
 
 function FindSpam()
@@ -482,4 +483,32 @@ function FindSpam()
     }
 
 }
+}
+
+function DrawScore()
+{
+  if(wordstodraw.length >= 7)
+  {
+      textSize(25);
+      text("Fail", 220, 25);
+      fill(0, 0, 0);
+  }
+  else if(wordstodraw.length > 0 && wordstodraw.length <= 3)
+  {
+      textSize(25);
+      text("Low Risk", 220, 25);
+      fill(0, 0, 0);
+  }
+  else if(wordstodraw.length > 3 && wordstodraw.length <= 6)
+  {
+      textSize(25);
+      text("High Risk", 220, 25);
+      fill(0, 0, 0);
+  }
+  else
+    {
+       textSize(25);
+      text("Pass", 220, 25);
+      fill(0, 0, 0);
+    }
 }
